@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Form1</title>
+    <style>
+          ol,ul{
+        list-style-type : none;
+    }
+    input{
+        margin:5px;
+        padding: 3px;
+    }
+    fieldset{
+        padding:10px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Department of Registration</h1>
+<form action="depart.php" method="post">
+    <fieldset>
+        <legend>Personal Information</legend>
+        <ul>
+            <li><label for="Name">Name:<input type="text" name="name" placeholder="Full Name" id="Name" required/></label></li>
+            <li><label for="Address">Address:<input type="text" name="address" placeholder="Permanent Address" id="Address" required/></label></li>
+            <li><label for="dob">Date of Birth:<input type="date" name="dob" id="dob" required></label></li>
+            <li><span>SEX:</span><label for="Male"><input type="radio" name="sex" id="Male" value="Male">Male</label><label for="Female"><input type="radio" name="sex" id="Female" value="Female">Female</label><label for="Other"><input type="radio" name="sex" id="Other" value="Other">Other</label></li>
+            <li><label for="email">Email:<input type="email" name="email" id="email" placeholder="example@email.com" required></label></li>
+        </ul>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </fieldset>
+</form>
+</body>
+</html>

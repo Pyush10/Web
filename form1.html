@@ -6,14 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Form1</title>
     <style>
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: aliceblue;
+    }
           ol,ul{
         list-style-type : none;
     }
+    h1{
+        display:flex;
+        justify-content: space-around;
+    }
+    label{
+        display:flex;
+        margin:2px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 5px;
+        
+    }
     input{
-        margin:5px;
-        padding: 3px;
+        margin: 5px;
+        padding: 5px;
     }
     fieldset{
+        padding:10px;
+    }
+    legend{
+        font-weight: bold;
+    }
+    [required]{
+        background-color: rgb(246, 255, 255);
+    }
+    #ID{
+        margin:5px;
         padding:10px;
     }
     </style>
@@ -23,16 +49,42 @@
 <form action="depart.php" method="post">
     <fieldset>
         <legend>Personal Information</legend>
+       
         <ul>
-            <li><label for="Name">Name:<input type="text" name="name" placeholder="Full Name" id="Name" required/></label></li>
-            <li><label for="Address">Address:<input type="text" name="address" placeholder="Permanent Address" id="Address" required/></label></li>
-            <li><label for="dob">Date of Birth:<input type="date" name="dob" id="dob" required></label></li>
-            <li><span>SEX:</span><label for="Male"><input type="radio" name="sex" id="Male" value="Male">Male</label><label for="Female"><input type="radio" name="sex" id="Female" value="Female">Female</label><label for="Other"><input type="radio" name="sex" id="Other" value="Other">Other</label></li>
+            <li><label for="Name">Name:<input type="text" name="name" placeholder="Full Name" id="Name" required/></label>
+                <label for="dob">Date of Birth:<input type="date" name="dob" id="dob" required></label>
+            </li>
+            <li><label for="Address">Address:<input type="text" name="address" placeholder="Permanent Address" id="Address" required/></label>
+                <span>SEX:</span><label for="Male"><input type="radio" name="sex" id="Male" value="Male">Male</label><label for="Female"><input type="radio" name="sex" id="Female" value="Female">Female</label><label for="Other"><input type="radio" name="sex" id="Other" value="Other">Other</label>
+            </li>
             <li><label for="email">Email:<input type="email" name="email" id="email" placeholder="example@email.com" required></label></li>
+            <li><label for="contact">Contact Number:<input type="tel" name="contact" id="contact" placeholder="contact no."></label></label></li>
+            <li><label for=""></label></li>
         </ul>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
+
     </fieldset>
+     <br><br>
+    <fieldset>
+        <legend>ID Information</legend>
+       
+        <ul>
+        <li><select id="ID" required>
+            <option value="National ID">National ID</option>
+            <option value="Citizenship Card" selected>Citizenship Card</option>
+            <option value="Driving License">Driving License</option>
+            <option value="Voter Card">Voter Card</option>
+        </select>
+        </li>
+        <li>
+            <label for="issue">Issued Date:<input type="text" name="issue" id="issue" placeholder="YYYY/MM/DD" required></label>
+        </li>
+        <li><label for="issuerg">Issued District<input type="text" name="issuerg" id="issuerg" required></label></li>
+        <li><labe>Upload ID<input type="file" name="IDF" id="IDF" enctype="multipart/form-data" accept=".jpg,.jpeg,.png,.pdf"></labe></li>
+       </ul>
+
+    </fieldset>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
 </form>
 </body>
 </html>

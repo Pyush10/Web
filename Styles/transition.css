@@ -1,0 +1,30 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgb(243, 242, 241);
+}
+h1{
+    color:rgb(34, 6, 94);
+    text-align: center;
+}
+.rotating{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: whitesmoke;
+    margin: 20px auto 10px auto;
+    text-align: center;
+    transform: rotate(0);
+    transition: all 2s;
+}
+.rotating:hover{
+    transform: rotate(360deg);
+    color:aliceblue;
+    font-size: 2.5em;
+}
+.rotating:focus-visible{
+    margin: 30px;
+}
